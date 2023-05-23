@@ -22,9 +22,13 @@ const handleChange = event => {
         event.preventDefault();
          
         onSubmit({ name: name, number: number });
+        reset();
     };
     
-       
+    const reset = () => {
+        setName('');
+        setNumber('');
+    };
 
         return (
             <Form onSubmit={handleSubmit}>
